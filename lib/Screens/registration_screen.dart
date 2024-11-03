@@ -22,7 +22,7 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
           children: [
             Container(
               height: 180,
-              child: Image.asset("name"),
+              // child: Image.asset("name"),
             ),
             SizedBox(height: 50),
             TextField(

@@ -24,7 +24,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Column(
             children: [ Container(
               height: 180,
-              child: Image.asset("name"),
+              child: Image.asset('images/SuaadLogo.png'),
             ),
             Text("Ms.Suaad",style: TextStyle(fontSize: 40, fontWeight: FontWeight.w900,
               color: Color(0xff2e386b),),),
@@ -32,12 +32,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ),
             SizedBox(height: 30),
             MyButton(
-              color: Colors.yellow[900]!,
+              color: Color(0xFF9B60B0),
               title: 'sign in',
               onPressed: (){},
             ),
             MyButton(
-              color: Colors.blue[800]!,
+              color: Color(0xFF9B60B0),
               title: 'register',
               onPressed: (){},
             )
