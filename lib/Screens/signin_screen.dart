@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../Widgets/MyButton.dart';
 
 class SignInScreen extends StatefulWidget {
+  static const  screenroute = 'signin_screen';
   const SignInScreen({ super.key });
 
   @override
@@ -22,10 +23,13 @@ class _SignInScreenState extends State<SignInScreen> {
           children: [
             Container(
               height: 180,
-              child: Image.asset("name"),
+              child: Image.asset('images/SuaadLogo.png'),
             ),
             SizedBox(height: 50),
+
+            //email box 
             TextField(
+             keyboardType: TextInputType.emailAddress,
               textAlign: TextAlign.center,
               onChanged: (value){},
               decoration: InputDecoration(
@@ -35,12 +39,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.orange,
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue,
+
+                  // TODO : change this later 
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
@@ -48,7 +54,10 @@ class _SignInScreenState extends State<SignInScreen> {
 
             ),
             SizedBox(height: 8),
+
+            //pass box 
             TextField(
+            obscureText: true,  
               textAlign: TextAlign.center,
               onChanged: (value){},
               decoration: InputDecoration(
@@ -58,12 +67,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.orange,
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue,
+
+                  // TODO : Change this later
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),

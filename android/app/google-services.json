@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457197067782",
+    "project_id": "ms-suaad-6d7df",
+    "storage_bucket": "ms-suaad-6d7df.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457197067782:android:cb5cee3886d88530bced87",
+        "android_client_info": {
+          "package_name": "com.suaad.suaadchatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXgtrNS-X2EK6b2XMEmm6Uw3D5CKnedzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

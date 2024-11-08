@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:suaadchatapp/Screens/chat_screen.dart';
 import 'package:suaadchatapp/Widgets/MyButton.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RegisterationScreen extends StatefulWidget {
+  static const  screenroute = 'registration_screen';
   const RegisterationScreen({ super.key });
 
   @override
@@ -10,6 +13,10 @@ class RegisterationScreen extends StatefulWidget {
 }
 
 class _RegisterationScreenState extends State<RegisterationScreen> {
+  final _auth = FirebaseAuth.instance;
+  late String email; 
+  late String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +29,17 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
           children: [
             Container(
               height: 180,
-              // child: Image.asset("name"),
+             child:  Image.asset('images/SuaadLogo.png'),
             ),
             SizedBox(height: 50),
+
+            //email box 
             TextField(
+              keyboardType: TextInputType.emailAddress,
               textAlign: TextAlign.center,
-              onChanged: (value){},
+              onChanged: (value){
+                email = value;
+              },
               decoration: InputDecoration(
                 hintText: 'Enter your Email',
                 contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
@@ -35,12 +47,12 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.orange,
+                  borderSide: BorderSide(color: Colors.purple,
                   width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue,
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
@@ -48,9 +60,14 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
 
             ),
             SizedBox(height: 8),
+
+            //pass box 
             TextField(
+              obscureText: true,
               textAlign: TextAlign.center,
-              onChanged: (value){},
+              onChanged: (value){
+                password = value;
+              },
               decoration: InputDecoration(
                 hintText: 'Enter your Password',
                 contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
@@ -58,12 +75,12 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.orange,
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue,
+                    borderSide: BorderSide(color: Colors.purple,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
@@ -74,7 +91,19 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
             MyButton(
                 color: Colors.blue[800]!,
                 title: "Register",
-                onPressed: (){}
+                onPressed: () async {
+                  // print(email);
+                  // print(password);
+                  
+                    try {
+                      final newuser = await _auth.createUserWithEmailAndPassword(
+                    email: email, password: password);
+                    // Navigator.pushNamed(context, ChatScreen.screenroute);
+                    } catch (e) {
+                      print(e);
+                      
+                    }
+                }
             )
           ],
         ),
