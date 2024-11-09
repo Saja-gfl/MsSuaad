@@ -1,16 +1,13 @@
 # suaadchatapp
 
-A new Flutter project.
+**Ms. Suaad - AI-Powered Classroom Assistant for Preschool Education**
+
+Ms. Suaad is an AI-driven voice assistant app designed to support preschool educators by enhancing the learning environment for young children. As a virtual teaching assistant, Ms. Suaad engages children through interactive storytelling, songs, and educational games. The app is equipped to recognize and respond to children individually, welcoming them and guiding them through activities such as learning letters, numbers, animal sounds, and simple educational stories.
+
+Beyond interactive learning, Ms. Suaad also assists teachers with daily routines, such as welcoming children, organizing activities, and keeping track of attendance. With built-in prompts and responses tailored to young learners, Ms. Suaad helps maintain an engaging, organized, and productive classroom, even in cases where teacher support may be limited. Our future goal is to collaborate with educational and AI research bodies to continually improve the app’s accuracy, making Ms. Suaad a dependable assistant in early childhood education.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+For the emulator, we used the Pixel 7 Pro. If it doesn’t function correctly, please try running it on the desktop emulator instead.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
